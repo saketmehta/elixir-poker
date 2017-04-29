@@ -14,6 +14,7 @@ defmodule Poker do
       supervisor(Poker.Endpoint, []),
       # Start your own worker by calling: Poker.Worker.start_link(arg1, arg2, arg3)
       # worker(Poker.Worker, [arg1, arg2, arg3]),
+      worker(Poker.Bank, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
